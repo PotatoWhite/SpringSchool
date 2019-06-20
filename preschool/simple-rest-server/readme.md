@@ -116,11 +116,10 @@
 ## SimpleController 생성
 1. 외부의 http Connection을 받아들일 controller를 작성 한다.
     - CRUD를 위해 다음의 Routing 정보를 등록한다.
-        - GET /api/simples -> getSimples
-        - GET /api/simples/{id} getSimple(@PathVariable Long id)
-        - POST /api/simples
-        - PATCH /api/simples
-        - DELETE /api/simples/{id}
+        - GET   /v1/simples/{id} 
+        - POST  /v1/simples
+        - PUT   /v1/simples
+        - DELETE /v1/simples/{id}
     ~~~java
     package org.springschool.demo.simplerestserver.simple;
 
@@ -156,12 +155,7 @@
     ~~~
 
 ## New Simple Controller
-1. Http Status를 이용하여 Client가 상태를 인지 할 수 있어야 한다.
-    - HEAD Method는 GET의 Header만을 이용한다.
-2. 예컨데
-    - 전체 data 조회시 Paging 한다.
-    - 개별 조회시 없으면 noContent를 반환한다.
-
+1. 간단한 에러 처리들을 추가해 보자
 
     ~~~java
     package org.springschool.demo.simplerestserver.simple;
