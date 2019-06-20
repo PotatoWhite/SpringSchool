@@ -1,0 +1,11 @@
+POST localhost:8080/v2/simples
+Content-Type: application/json
+
+{
+  "id": 1,
+  "dataString": "potato",
+  "dataInteger": 1234
+}
+
+
+###
